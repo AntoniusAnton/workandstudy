@@ -1,0 +1,133 @@
+﻿@media screen and (max-width: 760px) {
+    body {
+        min-width: 320px;
+    }
+    .container {
+        width: auto;
+        min-width: 288px;
+        margin: 0 16px;
+    }
+    .header__main {
+        background-size: 393px;
+        background-position: right 158px; 
+        background: none;
+        margin-top: 0;
+    }
+    .header__wrapper img{
+        margin-top: 258px;
+        width: 336px;
+    }
+    .header__left p{ 
+        width: 100%;
+        text-align: center;
+    }
+    .header__left button{
+        background: none;
+        box-shadow: none;
+        margin: 32px auto 0;
+        width: 100%;
+        
+    }
+    .header__main h1{
+        margin-top: 36px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 37.5px;
+    }
+    
+    .projects-title {
+        width: 100%;
+    }
+    .project-bottom-left-img {
+        margin-right: 0;
+    }
+    .about h2{
+        font-size: 24px;
+        line-height: 28.13px;
+    }
+    .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+    }
+    .card{
+        margin-top: 32px;
+    }
+    .card:nth-child(1){
+        margin-top: 32px;
+    }
+    .projects {
+        padding-bottom: 64px;
+    }
+    .projects h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .projects-top-img span{
+        top: 16px;
+        right: 16px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .project-bottom-left-img span{
+        top: 16px;
+        left: 16px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .project-bottom-right-img span{
+        top: 16px;
+        left: 16px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .projects-bottom-imgs{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 16px;   
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .footer{
+        text-align: center;
+    }
+    footer .container {
+        padding: 0px 16px;
+        box-sizing: border-box;
+    }
+    footer h3 {
+        margin: -14px 0 32px;
+        width: 100%;
+        text-align: center;
+    }
+    .footer p {
+        width: 100%;
+        margin-right: 0;
+    }
+    footer button {
+        float: none;
+        width: 133px;
+        height: 31px;
+        margin: 40px auto 8px;
+    }
+    footer li {
+        padding-left: 39px;
+    }
+    footer li + li {
+        margin-top: 18px;
+    }
+    footer li br {
+        display: inline;
+    }
+    .footer__top{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .copy {
+        margin-top: 64px;
+        padding-bottom: 64px;
+    }
+}
