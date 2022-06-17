@@ -436,6 +436,10 @@ margin: 57px auto 72px;
     color: #000000;
     margin-top: 15px;
 }
+.footer__block__left a {
+    text-decoration: none;
+    color: black;
+}
 
 
 
