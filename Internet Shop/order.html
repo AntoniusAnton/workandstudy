@@ -5,23 +5,37 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Internet Shop</title>
+    <title>Корзина</title>
     
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/order.css">
 
 
 </head>
 <body>
     <header class="header container"> 
         <div class="header__left">
-            <h1>QPICK</h1>
+            <a href="./index.html" class="logo">
+            <img src="./img/QPICK.png" alt="">
+            </a>
              <div class="header__chois">
 
                 <img src="./img/tel_img.png" alt="tel_icon">
 
                 <select>
                     <option>Выбрать модель телефона</option>
-                    <option>Выбрать модель телефона</option>
+                    <optgroup label="Apple">
+                            <option>iPhone 12</option>
+                            <option>iPhone 12 Max</option>
+                            <option>iPhone 13</option>
+                            <option>iPhone 13 Max</option>
+                            <option>iPhone 13 Pro Max</option>
+                    </optgroup>
+                    
+                    <option>Nokia</option>
+                    <option>Xiaomi</option>
+                    <option>Samsung</option>
                   </select>
 
                   <input class="search_form"  placeholder="Поиск ..."/>
@@ -37,21 +51,19 @@
                 <img src="./img/corf_img.svg" alt="corf_icon">
             </div>
         </div>
-
-
-        <div class="header__card">
-
-            <h2>Аксессуары для <br>
-                Iphone 13 Pro Max</h2>
-
-            <img src="./img/iphone_img.png" alt="iphone_icon">
-
-        </div>  
-        
         </div>
     </header>
 
-<main></main>
+<main>
+    <section class="order">
+        <img src="./img/empty_order_img.svg" alt="">
+        <h2>Корзина пуста</h2>
+        <h4>Но это никогда не поздно исправить :).</h4>
+        <button class="custom__btn">
+            <a href="#" class="button28">В каталог товаров</a>
+        </button>
+    </section>
+</main>
 
     <footer>
         <section class="footer">
@@ -59,9 +71,10 @@
                 <h2>QPICK</h2>
 
                 <ul class="footer__block__left">
-                    <li>Избранное</li>
-                    <li>Корзина</li>
-                    <li>Контакты</li>
+                    <li><a href="./favorites.html">Избранное</a></li>
+                    <li><a href="./catalog.html">Товары</a></li>
+                    <li><a href="./order.html">Корзина</a></li>
+                    <li><a href="/contact.html">Контакты</a></li>
                 </ul>
 
                 <div class="footer__block__center">
