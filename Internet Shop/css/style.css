@@ -139,9 +139,7 @@ main {
 }
 
 .case{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 44px;
+    margin-top: 10px;
 }
 /* discount card */
 .container__discount {
@@ -156,21 +154,47 @@ main {
     text-transform: uppercase;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
-.discount, 
-.retaimer, 
-.sept, 
-.num {
+.discount{
     font-weight: bold;
     font-size: 40px;
     line-height: 1;
 }
-.num {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 1;
-}
+.timer__items {
+    display: flex;
+    font-size: 48px;
+  }
+  .timer__item {
+    position: relative;
+    min-width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
+  .timer__item:not(:last-child)::after {
+    content: ':';
+    position: absolute;
+    right: -15px;
+  }
+  .timer-1{
+    border-left: 1px solid #000;
+    padding: 24px 0 0 24px;
+    margin-left: 24px;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+  }
 .toptext,
 .subnum {
     font-size: 12px;
@@ -204,6 +228,10 @@ main {
     left: 0;
     right: 0;
 }
+/* Карточки товаров Чехлы*/
+.main-subtitle {
+    margin-top: 44px;
+}
 .case__cards {
     margin-top: 20px;
     display: flex;
@@ -228,11 +256,185 @@ main {
     line-height: 21px;
     color: #1C1C27;
 }
+/*Наушники*/
+.headphones__cards {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+}
+.headphones__card {
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: 407px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+.headphones__card:nth-child(4), .headphones__card:nth-child(5), .headphones__card:nth-child(6) {
+    margin-top: 20px;
+}
+.favorit__icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.headphones__card-star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headphones__wrapper {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.headphones__card img {
+  display: block;
+}
+
+.img__type1 {
+    margin: 15px auto 54px;
+}
+.img__type2 {
+margin: 57px auto 72px;
+}
+.text__price {
+    color: #ffa542 !important;
+}
+.headphones__card p {
+    margin: 0 22px auto;
+
+    font-style: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1C1C27;
+}
+.buy__product {
+    position: absolute;
+    bottom: 10px;
+    left: 110px;
+}
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-16 {
+    border: none;
+    color: #000;
+    z-index: 1;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: #000;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+/*Беспроводные наушники*/
+.wireless__headphones__cards {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+}
+.wireless__headphones__card {
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: 407px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+.wireless__headphones__wrapper {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.wireless__headphones__card p {
+    margin: 0 22px auto;
+    margin-left: 22px;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1C1C27;
+}
+.apple__logo {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
 /* Footer */
-footer{
-    flex: none;
-    height: 100px;
-    background: gray;
+.footer {
+    margin-top: 30px;
+    
+}
+.footer__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1110px;
+    height: 149px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 0px 0px;
+}
+.footer__block  h2{
+    margin-left: 20px;
+}
+.footer__block__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.footer__block__right img {
+    margin-right: 10px;
+}
+.footer__block__left li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+    margin-top: 15px;
 }
 
 

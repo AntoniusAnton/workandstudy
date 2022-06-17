@@ -1,0 +1,53 @@
+/*main*/
+
+.contacts {
+    width: 918px;
+    margin: 0 auto;
+}
+.contact__wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+.contact {
+    margin: 0 auto;
+    margin-top: 27px;
+    width: 760px;
+    height: 554px;
+    left: 260px;
+    top: 86px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+.contact h2 {
+    margin: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    line-height: 21px;
+    color: #1C1C27;
+    }
+    .metka__adres {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+    }
+    .contact__card {
+        width: 97px;
+        height: 97px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact__right {
+        margin: 21px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .nomber_tel {
+        margin: 20px;
+    }

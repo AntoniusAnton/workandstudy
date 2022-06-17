@@ -1,79 +1,39 @@
-$(function(){
-    if ($('.retaimer').length) {
-        retimer();
-        setInterval(retimer, 500);
+document.addEventListener('DOMContentLoaded', function() {
+    // конечная дата, например 1 июля 2021
+    const deadline = new Date(2022, 06, 30);
+    // id таймера
+    let timerId = null;
+    // склонение числительных
+    function declensionNum(num, words) {
+      return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
     }
-    
-    $('.retaimer').each(function() {
-        retimer();
-        setInterval(retimer, 500);
-    });
-    
-    if ($('.slider_block').length) {
-        slideFlag['slider'] = false;
-        slidePointer['slider'] = 0;
-        setInterval(function(){
-            sliderRun('slider', 'toleft');
-        }, 5000);
-        $('.slider .to_left').click(function(){
-            sliderRun('slider', 'toleft');
-        });
-        $('.slider .to_right').click(function(){
-            sliderRun('slider', 'toright');
-        });
-        $('.slider_points span').click(function(){
-            let direction = $('.slider_points span').index(this);
-            if (!$(this).hasClass('active')) sliderRun('slider', direction);
-        })
+    // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+    function countdownTimer() {
+      const diff = deadline - new Date();
+      if (diff <= 0) {
+        clearInterval(timerId);
+      }
+      const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+      const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+      const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+      const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+      $days.textContent = days < 10 ? '0' + days : days;
+      $hours.textContent = hours < 10 ? '0' + hours : hours;
+      $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+      $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+      $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+      $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+      $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+      $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
     }
-    
-    if ($('.catmenu').length) {
-        $('.catmenu .opener').click(function(){
-            $('.catmenu').toggleClass('open')
-        });
-        $('.accordeon .sub').click(function(){
-            if ($(this).hasClass('open')) {
-                $(this).removeClass('open');
-            } else {
-                $('.accordeon .sub.open').removeClass('open');
-                $(this).addClass('open');
-            }
-        });
-        $('.accordeon .sub > a').click(function(e){
-            e.stopPropagation();
-        });
-    }
-    
-    $('.item').click(function(){
-        if ($(this).data('href')) location.assign($(this).data('href'));
-    })
-    
-    if ($('.product').length) {
-        $('.mini .rail').css({width: $('.mini .rail img').length * 60 - 10});
-        
-        $('.bigimage img').click(function(){
-            lightbox(this);
-        });
-        
-        $('.gal_left').click(function(){
-            if (!$(this).hasClass('disabled')) galSlide('left');
-        });
-        $('.gal_right').click(function(){
-            if (!$(this).hasClass('disabled')) galSlide('right');
-        });
-        
-        $('.rail img').click(function(){
-            let attr = $(this).attr('src').split('/');
-            attr = attr[0] + '/' + attr[1].split('_')[1];
-            $('.bigimage img').attr('src', attr);
-        });
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-});
+    // получаем элементы, содержащие компоненты даты
+    const $days = document.querySelector('.timer__days');
+    const $hours = document.querySelector('.timer__hours');
+    const $minutes = document.querySelector('.timer__minutes');
+    const $seconds = document.querySelector('.timer__seconds');
+    // вызываем функцию countdownTimer
+    countdownTimer();
+    // вызываем функцию countdownTimer каждую секунду
+    timerId = setInterval(countdownTimer, 1000);
+  });
+

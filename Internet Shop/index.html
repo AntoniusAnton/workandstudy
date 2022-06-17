@@ -21,7 +21,17 @@
 
                 <select>
                     <option>Выбрать модель телефона</option>
-                    <option>Выбрать модель телефона</option>
+                    <optgroup label="Apple">
+                            <option>iPhone 12</option>
+                            <option>iPhone 12 Max</option>
+                            <option>iPhone 13</option>
+                            <option>iPhone 13 Max</option>
+                            <option>iPhone 13 Pro Max</option>
+                    </optgroup>
+                    
+                    <option>Nokia</option>
+                    <option>Xiaomi</option>
+                    <option>Samsung</option>
                   </select>
 
                   <input class="search_form"  placeholder="Поиск ..."/>
@@ -46,7 +56,7 @@
 
             <img src="./img/iphone_img.png" alt="iphone_icon">
 
-        </div>   
+        </div>  
         
         </div>
     </header>
@@ -55,25 +65,15 @@
         <section class="case">
             <div class="container__discount">
                 <div class="discount">СКИДКА 30%!</div>
-                    
-                    <div class="retaimer" data-fordate="08-08-2022">
-                        <div class="toptext">до окончания акции осталось</div>
-                        
-                        <span class="num">56<span class="subnum">дней</span></span>
-                        
-                        <span class="sept">:</span>
-                        
-                        <span class="num">03<span class="subnum">часа</span></span>
-                        
-                        <span class="sept">:</span>
-                        
-                        <span class="num">49<span class="subnum">минут</span></span>
-                        
-                        <span class="sept">:</span>
-                        
-                        <span class="num">21<span class="subnum">секунда</span></span>
+                <div class="timer timer-1">
+                    <div class="timer__items">
+                      <div class="timer__item timer__days">00</div>
+                      <div class="timer__item timer__hours">00</div>
+                      <div class="timer__item timer__minutes">00</div>
+                      <div class="timer__item timer__seconds">00</div>
                     </div>
-                    
+                    <div class="timer__result"></div>
+                  </div>
             </div>
             <div class="container">
                 <h5 class="main-subtitle ">Чехлы</h5>
@@ -95,17 +95,239 @@
         </section> 
         <section class="headphones">
             <div class="container">
-                <h5 class="main-subtitle ">Наушники</h5>
-            <div class="headphones__cards">
-                <div class="headphones__card">
-                    <img src="" alt="headphones_img">
-                    <p>Стеклянные</p>
+                <h5 class="main-subtitle">Наушники</h5>
+                <div class="headphones__cards">
+                    <div class="headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type1" src="./img/Headphones_img1.png" alt="headphones_img">
+                        <div class="headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>Apple BYZ S852I</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.7</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p class="text__price">2927 $</p>
+                                <p class="text__price"><s>3527 $</s></p>
+                            </div>
+                            <div class="buy__product">
+                                <button class="custom-btn btn-16">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/pull_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type1" src="./img/Headphones_img2.png" alt="headphones_img">
+                        <div class="headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>Apple EarPods</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.5</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p>2327 ₸ $ ₽</p>
+                            </div>
+                            <div class="buy__product">
+                                <button class="custom-btn btn-16">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type2" src="./img/Headphones_img3.png" alt="headphones_img">
+                        <div class="headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>Apple EarPods</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.5</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p>2327 ₸ $ ₽</p>
+                            </div>
+                            <div class="buy__product">
+                                <button class="custom-btn btn-16">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type1" src="./img/Headphones_img1.png" alt="headphones_img">
+                        <div class="headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>Apple BYZ S852I</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.7</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p class="text__price">2927 $</p>
+                                <p class="text__price"><s>3527 $</s></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type1" src="./img/Headphones_img2.png" alt="headphones_img">
+                        <div class="headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>Apple EarPods</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.5</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p>2327 ₸ $ ₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type2" src="./img/Headphones_img3.png" alt="headphones_img">
+                        <div class="headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>Apple EarPods</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.5</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p>2327 ₸ $ ₽</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         </section>
 
+        <section class="wireless__headphones">
+            <div class="container">
+                <h5 class="main-subtitle">Беспроводные Наушники</h5>
+                <div class="wireless__headphones__cards">
+                    <div class="wireless__headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="apple__logo" src="./img/apple_logo_img.svg" alt="apple_logo">
+                        <img class="img__type1" src="./img/wireless_img1.png" alt="headphones_img">
+                        <div class="wireless__headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>Apple AirPods</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.7</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p class="text__price">9527 ₸ $</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wireless__headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type1" src="./img/wireless_img2.png" alt="headphones_img">
+                        <div class="wireless__headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>GERLAX GH-04</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.7</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p class="text__price">10314 ₸ $</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wireless__headphones__card">
+                        <div class="favorit__icon">
+                            <img src="./img/favorites_hart_img.svg" alt="favorites_hart">
+                        </div>
+                        <img class="img__type1" src="./img/wireless_img3.png" alt="headphones_img">
+                        <div class="wireless__headphones__wrapper">
+                            <div class="headphones__card-left">
+                                <p>BOROFONE BO4</p>
+                                
+                                <div class="headphones__card-star">
+                                    <img class="star__img" src="./img/Star_img.svg" alt="star_img">
+                                    <p>4.7</p>
+                                </div>
+                            </div>
+                            <div class="headphones__card-right">
+                                <p class="text__price">12987 ₸ $</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>           
     </main>
 
-    <footer> 
+    <footer>
+        <section class="footer">
+            <div class="footer__block">
+                <h2>QPICK</h2>
+
+                <ul class="footer__block__left">
+                    <li><a href="./favorites.html">Избранное</a></li>
+                    <li><a href="./catalog.html">Товары</a></li>
+                    <li><a href="./order.html">Корзина</a></li>
+                    <li><a href="/contact.html">Контакты</a></li>
+                </ul>
+
+                <div class="footer__block__center">
+                    <li>Условия сервиса</li>
+                </div>
+
+                <div class="footer__block__right">
+                    <img src="./img/VK.svg" alt="">
+                    <img src="./img/Telegram.svg" alt="">
+                    <img src="./img/Instagram.svg" alt="">
+                    <img src="./img/Whatsapp.svg" alt="">
+                </div>
+
+
+
+
+            </div>
+           
+
+        </section> 
 
     </footer>
 
@@ -113,6 +335,6 @@
 
     <script src="js/scripts.js"></script>
 
-    <script src="js/maim.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
