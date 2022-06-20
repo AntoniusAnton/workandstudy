@@ -1,0 +1,60 @@
+@media (max-width:768px) {
+   .container{
+      width: 100%;
+      margin: 0;
+      padding: 0 30px;
+   }
+   .header__chois{
+      margin-left: 20px;
+   }
+   .header__chois img{
+      display: none;
+   }
+   .search_form{
+      width: 100%;
+   }
+   .header__chois_right img:nth-child(1){
+      margin-right: 15px;
+   }
+   .header__chois select{
+      margin-left: 0;
+   }
+   .header__card h2 {
+      margin-left: 0;
+   }
+   .header__card img{
+      margin-left: 0;
+   }
+   .container__discount{
+      width: 100%;
+      border-radius: 0;
+   }
+   .case__cards{
+      flex-wrap: wrap;
+   }
+   .case__card {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-content: center;
+     margin-top: 15px;
+   }
+   .case__card:nth-child(2) {
+      margin: 15px 0;
+  }
+  .case__card img {
+   width: 151px;
+   margin: 15px auto;
+   }
+   .case__card p{
+      padding-bottom: 15px;
+   }
+   .headphones__card{
+      margin-top: 15px;
+      padding: 0 20px;
+      width: 100%;
+   }
+   .footer__block{
+      width: 100%;
+   }
+}

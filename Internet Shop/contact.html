@@ -11,52 +11,55 @@
 
     <link rel="stylesheet" href="css/contacts.css">
 
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/modil.css">
 
 </head>
 <body>
-    <header class="header container"> 
-        <div class="header__left">
-            <a href="./index.html" class="logo">
-                <img src="./img/QPICK.png" alt="">
-                </a>
-             <div class="header__chois">
+   <header class="header container"> 
+      <div class="header__left">
+          <a href="./index.html" class="logo">
+              <img src="./img/QPICK.png" alt="">
+          </a>
+           <div class="header__chois">
+              <img src="./img/tel_img.png" alt="tel_icon">
+              <select>
+                  <option>Выбрать модель телефона</option>
+                  <optgroup label="Apple">
+                          <option>iPhone 12</option>
+                          <option>iPhone 12 Max</option>
+                          <option>iPhone 13</option>
+                          <option>iPhone 13 Max</option>
+                          <option>iPhone 13 Pro Max</option>
+                  </optgroup>
+                  <option>Nokia</option>
+                  <option>Xiaomi</option>
+                  <option>Samsung</option>
+                </select>
+                <input class="search_form"  placeholder="Поиск ..."/>
+          </div>
+          <div class="header__chois_right">
+             <img src="./img/hart_img.svg" alt="favorites_icon">
+             <img src="./img/corf_img.svg" alt="corf_icon">
+         </div>
+          <div class="hamburger-lines">
+             <span class="line line1"></span>
+             <span class="line line2"></span>
+             <span class="line line3"></span>
+          </div>
+      </div>
+      <div class="header__right">
 
-                <img src="./img/tel_img.png" alt="tel_icon">
-
-                <select>
-                    <option>Выбрать модель телефона</option>
-                    <optgroup label="Apple">
-                            <option>iPhone 12</option>
-                            <option>iPhone 12 Max</option>
-                            <option>iPhone 13</option>
-                            <option>iPhone 13 Max</option>
-                            <option>iPhone 13 Pro Max</option>
-                    </optgroup>
-                    
-                    <option>Nokia</option>
-                    <option>Xiaomi</option>
-                    <option>Samsung</option>
-                  </select>
-
-                  <input class="search_form"  placeholder="Поиск ..."/>
-
-                  
-
-            </div>
-            
-        </div>
-        <div class="header__right">
-            <div class="header__chois_right">
-                <img src="./img/hart_img.svg" alt="favorites_icon">
-                <img src="./img/corf_img.svg" alt="corf_icon">
-            </div>
-        </div>
-        
-        </div>
-    </header>
+          <div class="header__card">
+                <h2>Аксессуары для <br>
+                   Iphone 13 Pro Max</h2>
+                <img src="./img/iphone_img.png" alt="iphone_icon">
+          </div>
+      </div>
+  </header>
 
 <main>
-    <section class="contacts">
+    <section class="contacts container">
         <div class="contact__wrapper">
             <div class="contact">
                 <h2>Наш офис</h2>
@@ -92,7 +95,7 @@
 
     <footer>
         <section class="footer">
-            <div class="footer__block">
+            <div class="footer__block container">
                 <h2>QPICK</h2>
 
                 <ul class="footer__block__left">
